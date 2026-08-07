@@ -173,17 +173,17 @@ int main() {
     // c. Traverse Forward
     list.displayForward();
 
-    // d. Traverse Backward
+ 
     list.displayBackward();
 
-    // b. Deletion Tests
+ 
     cout << "\n--- 2. DELETION TEST ---\n";
     list.deleteByRollNo(101); // Delete Head
     list.deleteByRollNo(105); // Delete Tail
     list.deleteByRollNo(103); // Delete Middle
     list.deleteByRollNo(999); // Try deleting non-existent roll no
 
-    // Displays after deletions
+ 
     list.displayForward();
     list.displayBackward();
 
