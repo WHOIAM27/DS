@@ -96,21 +96,21 @@ public:
             return;
         }
 
-        // Case 1: Only one node in the list
+        
         if (current == head && current == tail) {
             head = tail = nullptr;
         }
-        // Case 2: Deleting head node
+        
         else if (current == head) {
             head = head->next;
             head->prev = nullptr;
         }
-        // Case 3: Deleting tail node
+        
         else if (current == tail) {
             tail = tail->prev;
             tail->next = nullptr;
         }
-        // Case 4: Deleting a middle node
+        
         else {
             current->prev->next = current->next;
             current->next->prev = current->prev;
