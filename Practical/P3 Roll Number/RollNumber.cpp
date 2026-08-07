@@ -120,7 +120,7 @@ public:
         delete current;
     }
 
-    // c. Traverse the list forward to display all students
+
     void displayForward() const {
         if (head == nullptr) {
             cout << "\n--- Student List is Empty ---\n";
@@ -138,7 +138,7 @@ public:
         cout << "=========================================\n";
     }
 
-    // d. Traverse backward to display all students in reverse order
+
     void displayBackward() const {
         if (tail == nullptr) {
             cout << "\n--- Student List is Empty ---\n";
