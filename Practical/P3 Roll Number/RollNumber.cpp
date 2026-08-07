@@ -3,7 +3,7 @@
 
 using namespace std;
 
-// Node structure representing a student
+
 struct StudentNode {
     int rollNo;
     string name;
@@ -13,7 +13,7 @@ struct StudentNode {
     StudentNode(int r, const string& n) : rollNo(r), name(n), prev(nullptr), next(nullptr) {}
 };
 
-// Doubly Linked List Class
+
 class StudentDoublyLinkedList {
 private:
     StudentNode* head;
@@ -22,7 +22,6 @@ private:
 public:
     StudentDoublyLinkedList() : head(nullptr), tail(nullptr) {}
 
-    // Destructor to clean up dynamically allocated memory
     ~StudentDoublyLinkedList() {
         StudentNode* current = head;
         while (current != nullptr) {
@@ -32,9 +31,7 @@ public:
         }
     }
 
-    // a. Insert a student so that the list remains sorted by roll number
     void insertSorted(int rollNo, const string& name) {
-        // Prevent duplicate roll numbers
         StudentNode* check = head;
         while (check != nullptr) {
             if (check->rollNo == rollNo) {
@@ -46,14 +43,12 @@ public:
 
         StudentNode* newNode = new StudentNode(rollNo, name);
 
-        // Case 1: Empty list
         if (head == nullptr) {
             head = tail = newNode;
             cout << "[Success] Inserted Roll No " << rollNo << " (" << name << ")\n";
             return;
         }
 
-        // Case 2: Insert before head (smallest roll number)
         if (rollNo < head->rollNo) {
             newNode->next = head;
             head->prev = newNode;
