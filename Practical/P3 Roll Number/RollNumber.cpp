@@ -162,7 +162,7 @@ int main() {
 
     // --- Demonstration of Operations ---
     
-    // a. Sorted Insertion (Inserted out of order to prove sorting works)
+ 
     cout << "--- 1. INSERTION TEST ---\n";
     list.insertSorted(104, "Alice");
     list.insertSorted(101, "Bob");
@@ -170,7 +170,7 @@ int main() {
     list.insertSorted(102, "David");
     list.insertSorted(103, "Eve");
 
-    // c. Traverse Forward
+ 
     list.displayForward();
 
  
