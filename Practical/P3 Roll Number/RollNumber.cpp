@@ -76,7 +76,8 @@ public:
         cout << "[Success] Inserted Roll No " << rollNo << " (" << name << ")\n";
     }
 
-    // b. Delete a student by roll number
+
+
     void deleteByRollNo(int rollNo) {
         if (head == nullptr) {
             cout << "[Error] List is empty. Cannot delete.\n";
@@ -88,7 +89,8 @@ public:
             current = current->next;
         }
 
-        // Roll number not found
+
+
         if (current == nullptr) {
             cout << "[Error] Roll number " << rollNo << " not found in the list.\n";
             return;
